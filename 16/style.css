@@ -1,0 +1,74 @@
+/* Завдання onMouseOver і onMouseOut */
+.hover-area {
+    width: 200px;
+    height: 100px;
+    background-color: lightgray;
+    text-align: center;
+    line-height: 100px;
+    margin: 20px;
+}
+
+/* Завдання onContextMenu */
+.context-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 5px;
+}
+
+.context-menu li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Зображення для onMouseOver і onMouseOut */
+.hover-image {
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Ігрове поле для keyup */
+.game-area {
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+    position: relative;
+}
+
+.movable-object {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Інтерактивне меню */
+.interactive-menu {
+    display: none;
+    list-style: none;
+}
+
+.interactive-menu li.active {
+    background-color: yellow;
+}
+
+/* Додаткове завдання onMouseDown і onMouseUp */
+.drag-area {
+    width: 400px;
+    height: 300px;
+    border: 2px dashed gray;
+    position: relative;
+}
+
+.draggable-object {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    cursor: grab;
+}
