@@ -84,19 +84,25 @@ function updateMenuSelection() {
     });
 }
 
-// Додаткове завдання onMouseDown і onMouseUp
+
 const draggableObject = document.querySelector('.draggable-object');
 let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
 
-draggableObject.addEventListener('mousedown', () => {
+draggableObject.addEventListener('mousedown', (e) => {
     isDragging = true;
+    offsetX = e.clientX - draggableObject.getBoundingClientRect().left;
+    offsetY = e.clientY - draggableObject.getBoundingClientRect().top;
     draggableObject.style.cursor = 'grabbing';
 });
 
 document.addEventListener('mousemove', (e) => {
     if (isDragging) {
-        draggableObject.style.left = `${e.pageX - 25}px`;
-        draggableObject.style.top = `${e.pageY - 25}px`;
+        const newLeft = e.clientX - offsetX;
+        const newTop = e.clientY - offsetY;
+        draggableObject.style.left = `${newLeft}px`;
+        draggableObject.style.top = `${newTop}px`;
     }
 });
 

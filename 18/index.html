@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Form</title>
+</head>
+<body>
+
+    <h2>Оберіть улюблений колір</h2>
+    <form id="colorForm">
+        <input type="radio" name="color" value="red" onchange="changeBackgroundColor(this.value)"> Червоний<br>
+        <input type="radio" name="color" value="green" onchange="changeBackgroundColor(this.value)"> Зелений<br>
+        <input type="radio" name="color" value="blue" onchange="changeBackgroundColor(this.value)"> Синій<br>
+    </form>
+
+    <h2>Оберіть свої хобі</h2>
+    <form id="hobbyForm">
+        <input type="checkbox" name="hobby" value="Читання" onchange="displayHobbies()"> Читання<br>
+        <input type="checkbox" name="hobby" value="Спорт" onchange="displayHobbies()"> Спорт<br>
+        <input type="checkbox" name="hobby" value="Музика" onchange="displayHobbies()"> Музика<br>
+    </form>
+    <p>Ваші хобі: <span id="hobbyList"></span></p>
+
+    <h2>Оберіть країну</h2>
+    <select id="countrySelect" onchange="displayCountryInfo()">
+        <option value="none">Виберіть країну</option>
+        <option value="Україна">Україна</option>
+        <option value="США">США</option>
+        <option value="Німеччина">Німеччина</option>
+    </select>
+    <p id="countryInfo"></p>
+
+    <h2>Оцініть якість обслуговування</h2>
+    <form id="ratingForm">
+        <input type="radio" name="rating" value="1" onchange="displayRating()"> 1<br>
+        <input type="radio" name="rating" value="2" onchange="displayRating()"> 2<br>
+        <input type="radio" name="rating" value="3" onchange="displayRating()"> 3<br>
+        <input type="radio" name="rating" value="4" onchange="displayRating()"> 4<br>
+        <input type="radio" name="rating" value="5" onchange="displayRating()"> 5<br>
+    </form>
+    <p id="ratingMessage"></p>
+
+    <h2>Замовлення піци</h2>
+    <form id="pizzaForm" onchange="calculatePrice()">
+        <label for="pizzaType">Оберіть піцу:</label>
+        <select id="pizzaType">
+            <option value="Маргарита">Маргарита</option>
+            <option value="Пепероні">Пепероні</option>
+            <option value="Гавайська">Гавайська</option>
+        </select>
+
+        <h3>Оберіть розмір:</h3>
+        <input type="radio" name="size" value="50"> Маленька (+50)<br>
+        <input type="radio" name="size" value="100"> Середня (+100)<br>
+        <input type="radio" name="size" value="150"> Велика (+150)<br>
+
+        <h3>Додаткові інгредієнти:</h3>
+        <input type="checkbox" name="topping" value="25"> Сир (+25)<br>
+        <input type="checkbox" name="topping" value="25"> Перець (+25)<br>
+        <input type="checkbox" name="topping" value="25"> Шинка (+25)<br>
+    </form>
+    <h3>Ціна: <span id="pizzaPrice">0</span> грн</h3>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
