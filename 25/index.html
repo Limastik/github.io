@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas and SVG Tasks</title>
+</head>
+<body>
+    <h2>Canvas Tasks</h2>
+    <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000;"></canvas>
+    <button onclick="fillGradient('red', 'blue')">Fill Canvas with Gradient</button>
+    <button onclick="drawLine(50, 50, 450, 450)">Draw Line</button>
+
+    <h2>SVG Tasks</h2>
+    <div id="svgContainer"></div>
+    <button onclick="createSvgLine(10, 10, 200, 200, 'green', 4)">Create SVG Line</button>
+    <button onclick="createSvgRectangle(100, 50, 'yellow', 'black', 2)">Create SVG Rectangle</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
