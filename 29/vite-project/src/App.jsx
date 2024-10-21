@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import GenreList from './components/GenreList';
+import MovieTitle from './components/MovieTitle';
+import MovieInfo from './components/MovieInfo';
+import MovieDescription from './components/MovieDescription';
+import AgeRating from './components/AgeRating';
+import StarRating from './components/StarRating';
+import ButtonsContainer from './components/ButtonsContainer';
+import MovieContainer from './components/MovieContainer';
+import './styles/App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="App">
+      <Header />
+      <main className="main-content">
+        <GenreList />
+        <MovieTitle title="Stranger Things" />
+        <MovieInfo 
+          year="2019" 
+          director="Shawn Levy" 
+          seasons="3 (5 episodes)" 
+        />
+        <MovieDescription 
+          description="In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries."
+        />
+        <AgeRating age="16+" />
+        <StarRating count={4} />
+        <ButtonsContainer />
+        <MovieContainer />
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
-export default App
+export default App;
