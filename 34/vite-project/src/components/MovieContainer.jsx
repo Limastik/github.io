@@ -25,8 +25,8 @@ const MovieContainer = () => {
       </div>
       <div className="movie-category">
         <div className="movie-category-wrapper">
-          {movieImages.map((movie, index) => (
-            <MoviePoster key={index} src={movie.src} alt={movie.alt} />
+          {movieImages.map((movie) => (
+            <MoviePoster key={movie.src} {...movie} />
           ))}
         </div>
       </div>
